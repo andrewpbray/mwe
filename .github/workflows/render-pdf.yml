@@ -13,7 +13,7 @@ jobs:
         uses: addnab/docker-run-action@v3
         with:
           image: rocker/verse:4.3.1
-          options: -v ${{ github.workspace }}:/home/rstudio/stat20
+          options: -v ${{ github.workspace }}:/home/rstudio/mwe
           shell: bash
           run: |
             # execute from the repo
