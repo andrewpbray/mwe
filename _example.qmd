@@ -1,0 +1,6 @@
+---
+title: "Example"
+format: pdf
+---
+
+Hello world.
