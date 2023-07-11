@@ -1,6 +1,6 @@
 on:
   pull_request:
-    branches: main
+    branches: master
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -12,11 +12,12 @@ jobs:
       - name: Run the build process with Docker
         uses: addnab/docker-run-action@v3
         with:
-          image: stat20/stat20-docker:latest
+          image: rocker/verse:4.3.1
+          options: -v ${{ github.workspace }}:/home/rstudio/mwe
           shell: bash
           run: |
-            # execute from the textbook
+            # execute from the repo
             cd /home/rstudio/mwe/
 
             # run pre-render scripts
-            r ./render-pdf.r
+            r render-pdf.r
