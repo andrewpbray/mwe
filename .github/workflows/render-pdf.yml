@@ -15,5 +15,10 @@ jobs:
           image: stat20/stat20-docker:latest
           shell: bash
           run: |
+            docker exec stat20-docker ls
+            
+            # execute from the repo
+            cd /home/rstudio/mwe/
+
             # run pre-render scripts
-            r render-pdf.r
+            r ./render-pdf.r
