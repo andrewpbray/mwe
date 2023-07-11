@@ -15,7 +15,7 @@ jobs:
           image: stat20/stat20-docker:latest
           shell: bash
           run: |
-            # execute from the textbook
+            # execute from the repo
             cd /home/rstudio/mwe/
 
             # run pre-render scripts
