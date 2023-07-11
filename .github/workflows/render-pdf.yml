@@ -15,7 +15,5 @@ jobs:
           image: stat20/stat20-docker:latest
           shell: bash
           run: |
-            ls
-
             # run pre-render scripts
-            r ./render-pdf.r
+            r render-pdf.r
